@@ -2,15 +2,18 @@
 let yourScore = 0
 let computerScore = 0
 
+document.getElementById('yours').innerHTML = yourScore;
+document.getElementById('theirs').innerHTML = computerScore;
+
+
 // function calls a game of RPS
-function playRound(){
+function playRound(yourSelect){
 
 // Declare your choice
 // Store your choice as a number
 // call a choice from the computer
-// 
-let sign = prompt("Rock paper or scissors?");    
-let yourSelect
+//   
+
 let computerSelect = getRandom();
 let scoring
 
@@ -37,27 +40,18 @@ else if (computerSelect === 3){
 }   
 
 // determine your choice and compare it to the computer's choice
-if (sign.toLowerCase() === "rock") 
+if (yourSelect === 1) 
 {
 alert("you chose rock! " + "the computer chose " + computerSelect + ".");
-yourSelect = 1
-
 }
-else if (sign.toLowerCase() === "paper") 
+else if (yourSelect === 2) 
 {
 alert("you chose paper! "  + "the computer chose " + computerSelect + ".");
-yourSelect = 2
 }
-else if (sign.toLowerCase() === "scissors") 
+else if (yourSelect === 3) 
 {
 alert("you chose scissors! " + "the computer chose " + computerSelect + ".");
-yourSelect = 3
 }
-else if(sign.toLowerCase() !== "rock" | "paper" | "scissors")
-{
-alert("thats not an option!")
-}
-
 
 // define tied/win/loss within the game rules
 // adds to the winner's score
@@ -113,5 +107,18 @@ else if(yourSelect === 3 && computerSelect === "paper")
     yourScore = ++yourScore
     alert("You " + scoring + "! your score is " + yourScore + " the computer's score is " + computerScore)
 }
+
+
+
+document.getElementById('yours').innerHTML = yourScore;
+document.getElementById('theirs').innerHTML = computerScore;
+
 }
 
+function resetGame(){
+yourScore = 0
+computerScore = 0
+
+document.getElementById('yours').innerHTML = yourScore;
+document.getElementById('theirs').innerHTML = computerScore;
+}

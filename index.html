@@ -9,12 +9,23 @@
 
      <script src="script.js" defer></script>
 
-<h1 class="playbutton">Play a Round!</h1>
+<h1 class="playButton">Play a Round!</h1>
     <ul>
-        <li><button onclick = "playRound()">Rock</button></li>
-        <li><button onclick = "playRound()">Paper</button></li>
-        <li><button onclick = "playRound()">Scissors</button></li>
+        <li><button onclick = "playRound(1)">Rock</button></li>
+        <li><button onclick = "playRound(2)">Paper</button></li>
+        <li><button onclick = "playRound(3)">Scissors</button></li>
+        <li><button onclick = "resetGame()">Reset</button></li>
     </ul>
+<div class="scoreboard">
+    <h2 class="score">Your Score</h2>
+        <p id="yours"></p>
+    <h2 class="score"> Computer Score </h2>
+        <p id="theirs"></p>
+</div>
+
+ 
+    </ul>
+
 </body>
 </html>
 
