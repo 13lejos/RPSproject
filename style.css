@@ -64,3 +64,16 @@
     align-items: center;
     justify-content: center;
   }
+
+  ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 10em;
+  }
+
+  .playButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -200,6 +200,8 @@ computerScore = 0
 document.getElementById('yours').innerHTML = yourScore;
 document.getElementById('theirs').innerHTML = computerScore;
 
+document.querySelectorAll("log").forEach(el => el.remove());
+gameCounter = 1
 
 }
 
